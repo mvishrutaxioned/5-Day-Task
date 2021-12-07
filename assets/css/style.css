@@ -434,6 +434,50 @@ footer form div button:hover { background: #2fb9f0; }
 
 /* cameras styling ends here */
 
+/* articles styling starts here */
+
+.articles { background: #262936; }
+.articles .wrapper { padding: 65px 0; }
+
+.articles .wrapper ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 26px 1fr 26px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 26px;
+}
+
+.articles li { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex; 
+}
+
+.articles li span { 
+  margin-right: 30px; 
+  color: #009ad8;
+  font-size: 24px;
+}
+
+.articles li h2,
+.articles li p {
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .8px;
+}
+
+.articles li p {
+  margin-bottom: 0;
+  color: #a6bbbb;
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+/* articles styling ends here */
 
 
 
