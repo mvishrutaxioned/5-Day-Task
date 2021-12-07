@@ -479,7 +479,94 @@ footer form div button:hover { background: #2fb9f0; }
 
 /* articles styling ends here */
 
+/* info styling starts here */
 
+.info { background: #1e202b; }
+.info .wrapper { padding: 68px 0; }
+
+.info .wrapper > ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.info .wrapper > ul > li h2 {
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 34px;
+}
+
+.features ul { padding-left: 25px; }
+.features li { margin-bottom: 15px; }
+
+.features li h3 { 
+  margin-bottom: 20px;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .6px;
+}
+
+.features li h3::before,
+.analysis li::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: -25px;
+  background: url('../Images/images/arrow.png') no-repeat;
+}
+
+.features li p {
+  color: #a6bbbb;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.analysis ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.analysis li {
+  padding: 11px 0 11px 25px;
+  border-bottom: 1px solid #353636;
+  position: relative;
+  color: #a6bbbb;
+  font-size: 13px;
+}
+
+.analysis li:last-child { border: none; }
+
+.analysis li::before {
+  top: 14px;
+  left: 3px;
+}
+
+.awesome ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.awesome ul li, 
+.awesome ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+/* info styling ends here */
 
 
 /*=================================
