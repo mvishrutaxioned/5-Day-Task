@@ -92,4 +92,13 @@ $(document).ready(function () {
         $('body, html').toggleClass('hidden');
     })
 
+    // on form submit function
+    $('#searchForm').submit((e) => {
+        e.preventDefault();
+
+        inputVal = $('#searchForm input').val();
+        
+        fetchResults(inputVal);
+    })
+
 })
