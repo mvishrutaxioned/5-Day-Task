@@ -33,4 +33,54 @@ $(document).ready(function () {
         return './assets/Images/images/icons/icon-1.svg';
     }
 
+    // display weather details
+    function displayWeather(data) {
+        if(data.name) {
+            // if data found
+            var content =  `
+            <section class="city">
+                <div class="wrapper">
+                    <div class="city-head">
+                        <span>${days[dd]}</span>
+                        <span>${d + ' ' + months[m-1]}</span>
+                    </div>
+                    <div class="city-body">
+                        <p>${data.name}</p>
+                        <span>
+                            <h2>${Math.round(data.main.temp - 274)}&deg;C</h2>
+                            <figure><img src="${getImage(data.weather[0].main)}"></figure>
+                        </span>
+                        <ul>
+                            <li><img src="./assets/Images/images/icon-umberella.png" alt="Umbrella Icon"> ${data.main.humidity}% </li>
+                            <li><img src="./assets/Images/images/icon-wind.png" alt="Wind Icon"> ${Math.round(data.wind.speed * 1.6)}km/h </li>
+                            <li><img src="./assets/Images/images/icon-compass.png" alt="Compass Icon"> ${data.wind.deg}&deg;</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            `;
+            
+            $('.city').hide()
+            $(content).insertAfter('.banner')
+        } else {
+            // if data not found
+            var content = `
+            <section class="city">
+                <div class="wrapper">
+                    <div class="city-head">
+                        <span>${days[dd]}</span>
+                        <span>${d + ' ' + months[m-1]}</span>
+                    </div>
+                    <div class="city-body">
+                        <p class="sorry">Sorry! No such results found.</p>
+                    </div>
+                </div>
+            </section>
+            `;
+
+            $('.city').hide()
+            $(content).insertAfter('.banner')
+        }
+    }
+
 })
