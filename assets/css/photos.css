@@ -240,4 +240,35 @@ main styling ends here
 =================================*/
 
 /*media query starts*/
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  .wrapper { width: 90%; }
+}
 
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  nav { margin: 0 auto; }
+  .breadcrum { margin-top: 20px; }
+
+  .photos ul { 
+    -ms-grid-columns: 1fr; 
+    grid-template-columns: 1fr;
+  }
+
+  .photo-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .photos ul li .photo-content { padding-bottom: 20px; }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .breadcrum ul li a:hover { color: #a6bbbb; }
+}
