@@ -283,6 +283,102 @@ footer form div button:hover { background: #2fb9f0; }
 
 /* banner styling ends here */
 
+/* city detail styling starts here */
+
+.city {
+  height: 240px;
+  position: relative;
+  background-color: #1e202b; 
+}
+
+.city .wrapper {
+  width: 39%;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: absolute;
+  top: -54%;
+  right: 0;
+  left: 0;
+  background: #323544;
+  overflow: hidden;
+}
+
+.city .city-body .sorry {
+  color: #fff;
+  font-weight: 600;
+  font-size: 56px;
+  text-align: center;
+}
+
+.city-body { padding: 30px 20px; }
+
+.city-body p {
+  color: #a6bbbb;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.city-body > span {
+  margin: 17px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.city-body > span  h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 80px;
+  letter-spacing: 2px;
+}
+
+.city-body > span figure {
+  width: 16%;
+  margin-left: 35px;
+}
+
+.city-body ul { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+}
+
+.city-body ul li {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #a6a6a6;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.city-body ul li img {
+  width: 37%;
+  margin-right: 6px;
+}
+
+.city-head {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #2d303d;
+  color: #a6bbbb;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* city detail styling ends here */
 
 
 
