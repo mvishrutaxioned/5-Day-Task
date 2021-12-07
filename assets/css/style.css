@@ -578,9 +578,65 @@ footer form div button:hover { background: #2fb9f0; }
 =================================*/ 
 
 
+footer { background-color: #262936; }
+footer .wrapper { padding: 50px 0 60px 0; }
 
+footer .fContent {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  z-index: -10;
+}
 
+footer .fContent form { 
+  width: 65%;
+  padding-top: 0;
+  margin-right: 12%;
+}
 
+footer .fContent form button { padding: 10px 18px }
+
+.fContent ul { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+}
+
+.fContent ul li {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 5px;
+  background: #1e202b;
+}
+
+footer .fContent ul li a {
+  padding: 8px 12px;
+  color: #009ad8;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+footer .fContent ul li a:hover { color: #666; }
+
+footer .wrapper span {
+  color: #a6bbbb;
+  font-size: 14px;
+}
 
  /*=================================
   footer styling ends here
