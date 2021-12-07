@@ -83,4 +83,13 @@ $(document).ready(function () {
         }
     }
 
+    // responsive navbar functionality
+    $('#menu').click((e) => {
+        e.preventDefault()
+
+        $('#menu').toggleClass('active');
+        $('nav').toggleClass('showMenu');
+        $('body, html').toggleClass('hidden');
+    })
+
 })
