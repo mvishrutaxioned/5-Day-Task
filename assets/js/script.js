@@ -21,4 +21,16 @@ $(document).ready(function () {
         displayWeather(data)
     }
 
+    // get image function
+    function getImage(img) {
+        if (img == 'Rain') return './assets/Images/images/icons/icon-14.svg'
+        if (img == 'Broken Clouds') return './assets/Images/images/icons/icon-3.svg'
+        if (img == 'Clouds') return './assets/Images/images/icons/icon-5.svg'
+        if (img == 'Sunny') return './assets/Images/images/icons/icon-2.svg'
+        if (img == 'Clear') return './assets/Images/images/icons/icon-1.svg'
+        if (img == 'Mist' || img == 'Smoke' || img == 'Haze') return './assets/Images/images/icons/icon-7.svg'
+        if (img == "Drizzle") return './assets/Images/images/icons/icon-13.svg'
+        return './assets/Images/images/icons/icon-1.svg';
+    }
+
 })
