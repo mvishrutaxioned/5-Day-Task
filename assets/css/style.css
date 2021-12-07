@@ -380,7 +380,59 @@ footer form div button:hover { background: #2fb9f0; }
 
 /* city detail styling ends here */
 
+/* cameras styling starts here */
 
+.cameras { background-color: #1e202b; }
+.cameras .wrapper { padding-bottom: 95px; }
+
+.cameras h2 { 
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.cameras ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr 25px 1fr 25px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+.cameras ul li figure { position: relative; }
+.cameras ul li figure img:first-child { border-radius: 6px; }
+
+.cameras ul li figure img:nth-child(2) {
+  width: 12%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 43%;
+  right: 43%;
+  left: 43%;
+  bottom: 43%;
+}
+
+.cameras ul li h3 {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.cameras ul li small {
+  color: #a6bbbb;
+  font-size: 10px;
+}
+
+/* cameras styling ends here */
 
 
 
