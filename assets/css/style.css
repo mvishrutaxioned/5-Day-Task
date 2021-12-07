@@ -207,6 +207,83 @@ nav ul li a.active {
   main styling starts here
 =================================*/
 
+.banner {
+  height: 325px;
+  position: relative;
+}
+
+.banner figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.banner figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner form,
+footer .fContent form {
+  width: 100%;
+  padding-top: 65px;
+}
+
+.banner form div,
+footer .fContent form div {
+  width: 99%;
+  padding: 5px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #1e202b;
+}
+
+.banner form div input,
+footer form div input { 
+  width: 100%; 
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background: #1e202b;
+  color: #aebbbb;
+  font-weight: 600;
+  font-size: 13px;
+  outline: none;
+}
+
+.banner form div input:focus,
+footer form div input:focus,
+.banner form div input:active,
+footer form div input:active { background: #1e202b; }
+
+.banner form div button,
+footer form div button {
+  padding: 10px 37px;
+  border: none;
+  border-radius: 50px;
+  background: #009ad8;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.banner form div button:hover,
+footer form div button:hover { background: #2fb9f0; }
+
+/* banner styling ends here */
+
+
 
 
 
