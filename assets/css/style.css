@@ -568,6 +568,52 @@ footer form div button:hover { background: #2fb9f0; }
 
 /* info styling ends here */
 
+/* video styling starts here */
+
+.video {
+  width: 100%;
+  display: none;
+  position: relative;
+}
+
+.video .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+  background: #000000b3;
+}
+
+#closeVid {
+  padding: 2px 8px;
+  margin-left: 55%;
+  position: relative;
+  bottom: 20px;
+  background: #aebbbb;
+  font-family: 600;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+#closeVid:hover {
+  background: #666;
+  color: #fff;
+}
+
+video {
+  width: 50%;
+  z-index: 20;
+}
+
+/* video styling ends here */
+
 
 /*=================================
   main styling ends here
@@ -790,6 +836,9 @@ footer .wrapper span {
     background: #3e4358;
     color: #2fb9f0;
   }
+
+  #closeVid { margin-left:  85%}
+  video { width: 80%; }
 }
 
 /*media query for 540px starts here*/
@@ -838,8 +887,24 @@ footer .wrapper span {
     color: #009ad8; 
     background: #3e4358;
   }
+
+  #closeVid { 
+    padding: 0 6px;
+    bottom: 8px; 
+    font-size: 12px;
+  }
+
+  #closeVid:hover { 
+    background: #aebbbb;
+    color: #000; 
+  }
   
   .banner form div button:hover,
   footer form div button:hover { background: #009ad8; }
   footer .fContent ul li a:hover { color: #009ad8; }
+}
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  video { width: 90%; }
 }
