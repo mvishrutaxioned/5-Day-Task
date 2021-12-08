@@ -83,6 +83,14 @@ $(document).ready(function () {
         }
     }
 
+    // close video function
+    function closeVid(e) {
+        e.preventDefault()
+        $('.video').fadeOut()
+        $('video').get(0).pause();
+        $('video').get(0).currentTime = 0;
+    }
+
     // responsive navbar functionality
     $('#menu').click((e) => {
         e.preventDefault()
@@ -91,6 +99,29 @@ $(document).ready(function () {
         $('nav').toggleClass('showMenu');
         $('body, html').toggleClass('hidden');
     })
+
+    // display video funcitionality
+    $('.cameras .wrapper ul li > a').each(function(i, elem) {
+        $(this).click(e => {
+            e.preventDefault()
+            $('.video').fadeIn();
+        })
+    })
+
+    // close video on click
+    $('#closeVid').click(e => {
+        closeVid(e)
+    })
+
+    // close video on clicking outside
+    if(document.title == 'Homepage') {
+        $(document).mouseup(e => {
+            var vid = $('video');
+            if(!vid.is(e.target) && vid.has(e.target).length === 0) {
+                closeVid(e)
+            }
+        })
+    }
 
     // on form submit function
     $('#searchForm').submit((e) => {
