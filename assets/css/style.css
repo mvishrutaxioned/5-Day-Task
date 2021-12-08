@@ -578,9 +578,18 @@ footer form div button:hover { background: #2fb9f0; }
 
 .video .wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -599,6 +608,8 @@ footer form div button:hover { background: #2fb9f0; }
   background: #aebbbb;
   font-family: 600;
   cursor: pointer;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
 }
 
@@ -613,6 +624,40 @@ video {
 }
 
 /* video styling ends here */
+
+/* toggleBtn styling starts here */
+
+#toggleBtn {
+  display: none;
+  width: 100%;
+  height: 0;
+  position: relative;
+  text-indent: -9999px;
+}
+
+#toggleBtn::after {
+  content: '\f106';
+  padding: 6px 12px;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 22px;
+  opacity: .3;
+  cursor: pointer;
+  text-indent: 0;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#toggleBtn:hover::after { opacity: .8; }
+
+/* toggleBtn styling ends here */
 
 
 /*=================================
@@ -847,6 +892,7 @@ footer .wrapper span {
   footer .fContent form { width: 100%; }
   .fContent form div button { padding: 5px 15px; }
   .city .wrapper { width: 90%; }
+  .cameras ul { justify-items: center; }
 
   footer .fContent { 
     -webkit-box-orient: vertical; 
@@ -899,6 +945,7 @@ footer .wrapper span {
     color: #000; 
   }
   
+  #toggleBtn:hover::after { opacity: .3; }
   .banner form div button:hover,
   footer form div button:hover { background: #009ad8; }
   footer .fContent ul li a:hover { color: #009ad8; }
