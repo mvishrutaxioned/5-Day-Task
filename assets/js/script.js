@@ -83,6 +83,17 @@ $(document).ready(function () {
         }
     }
 
+    // hide and show toggle btn functioanality
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) { //use `this`, not `document`
+            $('#toggleBtn').fadeIn();
+            $('#toggleBtn').css({"display":"flex"});
+        } else {
+            $('#toggleBtn').fadeOut();
+            $('#toggleBtn').css({"display":"none"});
+        }
+    });
+
     // close video function
     function closeVid(e) {
         e.preventDefault()
@@ -90,6 +101,12 @@ $(document).ready(function () {
         $('video').get(0).pause();
         $('video').get(0).currentTime = 0;
     }
+
+    // on toggleBtn click functionality
+    $('#toggleBtn').click(e => {
+        e.preventDefault();
+        window.scroll({top: 0, behavior: "smooth"});
+    })
 
     // responsive navbar functionality
     $('#menu').click((e) => {
@@ -101,7 +118,7 @@ $(document).ready(function () {
     })
 
     // display video funcitionality
-    $('.cameras .wrapper ul li > a').each(function(i, elem) {
+    $('.live a').each(function(i, elem) {
         $(this).click(e => {
             e.preventDefault()
             $('.video').fadeIn();
