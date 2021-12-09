@@ -107,6 +107,7 @@ $(document).ready(function () {
         $('.video').fadeOut()
         $('video').get(0).pause();
         $('video').get(0).currentTime = 0;
+        $('html, body').css({"overflow":"visible"})
     }
 
     // on toggleBtn click functionality
@@ -129,6 +130,7 @@ $(document).ready(function () {
         $(this).click(e => {
             e.preventDefault()
             $('.video').fadeIn();
+            $('html, body').css({"overflow":"hidden"})
         })
     })
 
