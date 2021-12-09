@@ -83,14 +83,21 @@ $(document).ready(function () {
         }
     }
 
+    // adding class to toggleBtn
+    function addClass() {
+        $('#toggleBtn').addClass('none');
+    }
+    addClass()
+
     // hide and show toggle btn functioanality
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) { //use `this`, not `document`
+        var headHeight = $('header').height();
+        if ($(this).scrollTop() > headHeight) { //use `this`, not `document`
             $('#toggleBtn').fadeIn();
-            $('#toggleBtn').css({"display":"flex"});
+            $('#toggleBtn').removeClass('none');
         } else {
             $('#toggleBtn').fadeOut();
-            $('#toggleBtn').css({"display":"none"});
+            $('#toggleBtn').addClass('none');
         }
     });
 
