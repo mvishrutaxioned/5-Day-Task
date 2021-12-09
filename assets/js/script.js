@@ -83,14 +83,21 @@ $(document).ready(function () {
         }
     }
 
+    // adding class to toggleBtn
+    function addClass() {
+        $('#toggleBtn').addClass('none');
+    }
+    addClass()
+
     // hide and show toggle btn functioanality
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) { //use `this`, not `document`
+        var headHeight = $('header').height();
+        if ($(this).scrollTop() > headHeight) { //use `this`, not `document`
             $('#toggleBtn').fadeIn();
-            $('#toggleBtn').css({"display":"flex"});
+            $('#toggleBtn').removeClass('none');
         } else {
             $('#toggleBtn').fadeOut();
-            $('#toggleBtn').css({"display":"none"});
+            $('#toggleBtn').addClass('none');
         }
     });
 
@@ -100,6 +107,7 @@ $(document).ready(function () {
         $('.video').fadeOut()
         $('video').get(0).pause();
         $('video').get(0).currentTime = 0;
+        $('html, body').css({"overflow":"visible"})
     }
 
     // on toggleBtn click functionality
@@ -122,6 +130,7 @@ $(document).ready(function () {
         $(this).click(e => {
             e.preventDefault()
             $('.video').fadeIn();
+            $('html, body').css({"overflow":"hidden"})
         })
     })
 
