@@ -122,6 +122,7 @@ $(document).ready(function () {
         $(this).click(e => {
             e.preventDefault()
             $('.video').fadeIn();
+            $('html, body').css({"overflow":"hidden"})
         })
     })
 
